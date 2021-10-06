@@ -1,4 +1,3 @@
-# Projectchatbot
 import speech_recognition as sr
 import pyttsx3
 
@@ -10,17 +9,17 @@ engine.say('How may i help you')
 engine.runAndWait()
 
 def talk(text):
-engine.say(text)
-engine.runAndWait()
+    engine.say(text)
+    engine.runAndWait()
 try:
-with sr.Microphone() as source:
-print('Listening...')
-voice = listener.listen(source)
-command = listener.recognize_google(voice)
-command = command.lower()
-if 'alexa' in command:
-talk(command)
-print(command)
+    with sr.Microphone() as source:
+        print('Listening...')
+        voice = listener.listen(source)
+        command = listener.recognize_google(voice)
+        command = command.lower()
+        if 'alexa' in command:
+            talk(command)
+            print(command)
 except:
-pass
+    pass
 #in progress
